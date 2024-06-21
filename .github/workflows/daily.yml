@@ -39,6 +39,9 @@ jobs:
           cat csv/szpi.csv | bin/csv2rpz.sh > rpz/szpi.rpz
           cat csv/others.csv | bin/csv2rpz.sh > rpz/others.rpz
           cat csv/*.csv | bin/csv2rpz.sh > rpz/all.rpz
+          # Slovak blocklists:
+          cat csv/sk/urhh.sk.csv | bin/csv2rpz.sh > rpz/sk/urhh.sk.rpz
+          cat csv/sk/*.csv | bin/csv2rpz.sh > rpz/sk/all.rpz
 
       - name: smoke check
         run: bin/check.sh
