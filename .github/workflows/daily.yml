@@ -31,6 +31,9 @@ jobs:
       - name: Others
         run: bin/others.sh
 
+      - name: SK - URHH
+        run: bin/sk/urhh.sk.sh
+
       - name: generate RPZs
         run: |
           cat csv/mfcr.csv | bin/csv2rpz.sh > rpz/mfcr.rpz
