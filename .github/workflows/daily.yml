@@ -15,6 +15,8 @@ jobs:
       # Checkout the branch
       - name: checkout
         uses: actions/checkout@v4
+        with:
+          ref: aa-main
 
       - name: MFCR data
         run: bin/mfcr.sh
@@ -59,4 +61,4 @@ jobs:
           git config user.email "<>"
           git add -A
           git commit -m "daily commit ${{ env.date }}" || true
-          git push origin master || true
+          git push origin aa-main || true
